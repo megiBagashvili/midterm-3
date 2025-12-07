@@ -21,7 +21,7 @@ export class UsersService implements OnModuleInit {
             for (let i = 0; i < 30_000; i++) {
                 dataToInsert.push({
                     fullName: faker.person.fullName(),
-                    email: faker.internet.email(),
+                    email: `${i}-${faker.internet.email()}`,
                     age: faker.number.int({ min: 15, max: 90 }),
                     gender: faker.helpers.arrayElement(['m', 'f']),
                 });
