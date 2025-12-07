@@ -4,15 +4,15 @@ import { UserQueryDto } from './dto/user-query.dto';
 
 @Controller('users')
 export class UsersController {
-  constructor(private readonly usersService: UsersService) {}
+    constructor(private readonly usersService: UsersService) { }
 
-  @Get('total-users')
-  getTotalUsers() {
-    return this.usersService.getTotalUsers();
-  }
+    @Get('total-users')
+    getTotalUsers() {
+        return this.usersService.getTotalUsers();
+    }
 
-  @Get()
-  findAll(@Query() query: UserQueryDto) {
-    return this.usersService.findAll(query);
-  }
+    @Get()
+    findAll(@Query() query: UserQueryDto) {
+        return this.usersService.findAll(query);
+    }
 }
